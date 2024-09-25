@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+        <header class=" top-0 border-b-[1px] z-[10]">
+          <div class="nav-container bg-orange-50  ">
+            <nav class="flex w-10/12 mx-auto py-6 justify-between items-center">
+                <button id="show-home-button" onclick="window.location.href='./question.html'"
+                class="py-2 px-10 rounded-xl bg-lime-400 text-black font-bold"
+                id="blog"
+              >
+                Blog
+              </button>
+              <div class=" md:flex items-center gap-3">
+                <div class="lg:w-[2vw] md:w-[4vw] w-[7vw]">
+                  <img src="./assets/logo.png" alt="" />
+                </div>
+                <h1 class="font-bold md:text-xl hidden md:block">
+                  Bangladesh Donation
+                </h1>
+              </div>
+              <div class="balance flex items-center gap-1">
+                <div class="">
+                  <div class="lg:w-[2vw] md:w-[5vw] w-[10w]">
+                    <img src="./assets/coin.png" alt="" />
+                  </div>
+                </div>
+                <h1 class="text-lg font-semibold" id="mianBalace">10000BDT</h1>
+              </div>
+            </nav>
+            <div class=" flex justify-center  bg-transparent backdrop-blur-xl z-50 gap-6 py-5">
+              <button
+                id="donation"
+                class="bg-[#b4f461] py-2 px-10 rounded-lg text-black font-bold"
+              >
+                Donation
+              </button>
+              <button
+                id="history"
+                class="outline outline-gray-300 py-2 px-10 rounded-lg text-black font-bold"
+              >
+                History
+              </button>
+            </div>
+          </div>
+
+
+         
+
+         </header>
+
+         <main class="bg-white">
+          <div class="w-10/12 mx-auto py-10  space-y-3">
+            <div class="collapse bg-base-200">
+              <input type="radio" name="my-accordion-1" checked="checked" />
+              <div class="collapse-title text-xl font-bold text-black">What is the document object model(Dom)?</div>
+              <div class="collapse-content">
+                <p>The Document Object Model (DOM) is a programming API for HTML and XML documents</p>
+              </div>
+            </div>
+            <div class="collapse bg-base-200">
+              <input type="radio" name="my-accordion-1" />
+              <div class="collapse-title text-xl  font-bold text-black">What is event delegation in the context  of the dom and why is it usefull?</div>
+              <div class="collapse-content">
+                <p>Event delegation is a design pattern in JavaScript used to efficiently manage and handle events on multiple child elements by attaching a single event listener to a common ancestor element.</p>
+              </div>
+            </div>
+            <div class="collapse bg-base-200">
+              <input type="radio" name="my-accordion-1" />
+              <div class="collapse-title text-xl  font-bold text-black">How do manifulet an elements attribute and style using the Dom?</div>
+              <div class="collapse-content">
+                <p>You can use the setAttribute() method in either case. It accepts two parameters: the attribute name and the attribute value.</p>
+              </div>
+            </div>
+
+          </div>
+         </main>
+   <script src="calculation.js"></script>      
+</body>
+</html>
