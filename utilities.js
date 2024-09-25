@@ -3,3 +3,8 @@ function showSectionById(id){
     document.getElementById(id).classList.remove('hidden');
   
   }
+
+  document.getElementById('show-donation-button')
+  .addEventListener('click', function(){
+    showSectionById('donetion-button')
+  })

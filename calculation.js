@@ -1,14 +1,5 @@
 
 
-// const blog = document.getElementById("blog");
-// blog.addEventListener("click", function () {
-//   window.location.href = "../html/blog.html";
-// });
-document.getElementById('show-home-button').addEventListener('click',function(){
-  showSectionById('home-section')
-})
-
-
 // TODO Global
 document.getElementById('modalClose').addEventListener('click' , function(){
     document.getElementById('modal').classList.add('hidden')
@@ -47,6 +38,17 @@ cart1.addEventListener("click", function () {
     document.getElementById("donateAmount1").value = "";
 
     document.getElementById('modal').classList.remove('hidden')
+
+    const div = document.createElement('div')
+    div.classList.add('bg-state-100 border-2 border-gray-400 p-4 rounded-xl');
+    div.innerHTML= `
+    <h1 class="text-xl font-bold"> ${inputValue1}Taka in Doneted for ${title1}</h1>
+    <p class="fonnt-semibold">${time}</p>
+    `;
+
+    // const historySection = document.getElementById("section-history");
+    // historySection.insertBefore(div, historySection.firstChild);
+   document.getElementById('section-history').appendChild;
 
     alert("Invalide Donated Amount");
   }
