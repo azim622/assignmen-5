@@ -5,18 +5,28 @@ document.getElementById('modalClose').addEventListener('click' , function(){
     document.getElementById('modal').classList.add('hidden')
 })
 
-// function valueGet(id) {
-//   const value = document.getElementById(id).value;
-//   const numValue = parseFloat(value);
-//   return numValue;
-// }
-// function valueFloat(id) {
-//   const valuecall = document.getElementById(id).innerText;
-//   const numfloat = parseFloat(valuecall);
-//   return numfloat;
-// }
+function valueGet(id) {
+  const value = document.getElementById(id).value;
+  const numValue = parseFloat(value);
+  return numValue;
+}
+function valueFloat(id) {
+  const valuecall = document.getElementById(id).innerText;
+  const numfloat = parseFloat(valuecall);
+  return numfloat;
+}
 //
 
+
+document.getElementById('donation-button').addEventListener('click',function(){
+  document.getElementById('donation-section').classList.remove('hidden');
+  document.getElementById('section-history').classList.add('hidden')
+})
+
+document.getElementById('history-button').addEventListener('click',function(){
+  document.getElementById('donation-section').classList.add('hidden');
+  document.getElementById('section-history').classList.remove('hidden')
+})
 //! cart-1
 
 const cart1 = document.getElementById("donatenow1");
@@ -45,16 +55,14 @@ cart1.addEventListener("click", function () {
     <h1 class="text-xl font-bold"> ${inputValue1}Taka in Doneted for ${title1}</h1>
     <p class="fonnt-semibold">${time}</p>
     `;
-
-    // const historySection = document.getElementById("section-history");
-    // historySection.insertBefore(div, historySection.firstChild);
    document.getElementById('section-history').appendChild;
-
+  }
+  else{
     alert("Invalide Donated Amount");
   }
+  
 });
 
-//*...............
 
 //! cart-2
 
@@ -67,6 +75,10 @@ cart2.addEventListener("click", function () {
   const inputValue2 = parseFloat(
     document.getElementById("donateAmount2").value);
 
+    const title2 = document.getElementById('title2').innerText;
+  const currentDateTime = new Date();
+  const time = 'Date:'+ currentDateTime.toString();
+
 
   if (mainBalance > inputValue2 || inputValue2 === Number || inputValue2 > 0) {
     const newBalance2 = cart1Balance + inputValue2;
@@ -77,6 +89,14 @@ cart2.addEventListener("click", function () {
     document.getElementById("donateAmount2").value = "";
 
     document.getElementById('modal').classList.remove('hidden')
+
+    const div = document.createElement('div')
+    div.classList.add('bg-state-100 border-2 border-gray-400 p-4 rounded-xl');
+    div.innerHTML= `
+    <h1 class="text-xl font-bold"> ${inputValue2}Taka in Doneted for ${title2}</h1>
+    <p class="fonnt-semibold">${time}</p>
+    `;
+   document.getElementById('section-history').appendChild;
 
   }
   
@@ -101,6 +121,10 @@ cart3.addEventListener("click", function () {
     document.getElementById("donateAmount3").value
   );
 
+  const title3 = document.getElementById('title3').innerText;
+  const currentDateTime = new Date();
+  const time = 'Date:'+ currentDateTime.toString();
+
 //
   if (mainBalance > inputValue3 || inputValue3 === Number || inputValue3 > 0) {
     const newBalance3 = cart1Balance + inputValue3;
@@ -111,7 +135,14 @@ cart3.addEventListener("click", function () {
     document.getElementById("donateAmount3").value = "";
 
     document.getElementById('modal').classList.remove('hidden')
-.insertBefore(div, historySection.firstChild);
+
+    const div = document.createElement('div')
+    div.classList.add('bg-state-100 border-2 border-gray-400 p-4 rounded-xl');
+    div.innerHTML= `
+    <h1 class="text-xl font-bold"> ${inputValue3}Taka in Doneted for ${title3}</h1>
+    <p class="fonnt-semibold">${time}</p>
+    `;
+   document.getElementById('section-history').appendChild;
 
   } else {
     alert("Invalide Donated Amount");

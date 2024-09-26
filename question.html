@@ -43,14 +43,14 @@
         </nav>
         <div class=" flex justify-center  bg-transparent backdrop-blur-xl z-50 gap-6 py-5">
           <button
-            id="donation"
+            id="donation-button"
             class="bg-[#b4f461] py-2 px-10 rounded-lg text-black font-bold"
           >
             Donation
           </button>
           <button
-            id="history"
-            class="outline outline-gray-300 py-2 px-10 rounded-lg text-black font-bold hidden"
+            id="history-button"
+            class="outline outline-gray-300 py-2 px-10 rounded-lg text-black font-bold "
           >
             History
           </button>
@@ -62,152 +62,156 @@
       <div class=" bg-white py-10 " id="card-prt">
         <div class=" w-[83vw] mx-auto space-y-4">
           
-          <div class="cart-1">
-            <div
-              class=" p-3 grid grid-cols-1 md:grid-cols-2  border border-gray-200 rounded-2xl ">
-                  <img src="./assets/feni.png" alt="">
-              <div class="right">
-                <div class="balance inline-flex items-center bg-gray-300 py-2 px-6 rounded-lg">
-                  <div class="flex items-center">
-                    <div class="lg:w-[1.7vw] w-[9vw]">
-                      <img src="./assets/coin.png" class="" alt="" />
+          <section class="donation-section">
+            <div class="cart-1">
+              <div
+                class=" p-3 grid grid-cols-1 md:grid-cols-2  border border-gray-200 rounded-2xl ">
+                    <img src="./assets/feni.png" alt="">
+                <div class="right">
+                  <div class="balance inline-flex items-center bg-gray-300 py-2 px-6 rounded-lg">
+                    <div class="flex items-center">
+                      <div class="lg:w-[1.7vw] w-[9vw]">
+                        <img src="./assets/coin.png" class="" alt="" />
+                      </div>
+                      <h1 class="font-bold text-lg ml-2" id="cart1-Balance">15000</h1>
+                      <span class="pl-1 font-semibold text-black">BDT</span>
                     </div>
-                    <h1 class="font-bold text-lg ml-2" id="cart1-Balance">15000</h1>
-                    <span class="pl-1 font-semibold text-black">BDT</span>
                   </div>
+                  <h1 class="text-xl font-bold pt-6" >
+                    Donate for <span id="title1">Flood at Noakhali, Bangladesh</span>
+                  </h1>
+                  <p class="pt-6 leading-6">
+                    The recent floods in Noakhali have caused significant damage
+                    to homes infrastructure. Your donation will help provide
+                    essential supplies and to those affected by this disaster.
+                    Every contribution, big or small, makes difference. Please
+                    join us in supporting the relief efforts and making a positive
+                    impact on the lives of those in need.
+                  </p>
+                  <input
+                    type="text"
+                    class="bg-white rounded-lg outline-1 outline-gray-200 px-3 py-3 block outline w-full mt-7 text-black"
+                    name=""
+                    id="donateAmount1"
+                    placeholder="White Donation Amount"
+                  />
+                  <button
+                    id="donatenow1"
+                    class="bg-[#b4f461] mx-auto rounded-lg py-3 px-5 text-xl font-bold text-black mt-2 w-full"
+                  >
+                    Donate Now
+                  </button>
                 </div>
-                <h1 class="text-xl font-bold pt-6" >
-                  Donate for <span id="title1">Flood at Noakhali, Bangladesh</span>
-                </h1>
-                <p class="pt-6 leading-6">
-                  The recent floods in Noakhali have caused significant damage
-                  to homes infrastructure. Your donation will help provide
-                  essential supplies and to those affected by this disaster.
-                  Every contribution, big or small, makes difference. Please
-                  join us in supporting the relief efforts and making a positive
-                  impact on the lives of those in need.
-                </p>
-                <input
-                  type="text"
-                  class="bg-white rounded-lg outline-1 outline-gray-200 px-3 py-3 block outline w-full mt-7 text-black"
-                  name=""
-                  id="donateAmount1"
-                  placeholder="White Donation Amount"
-                />
-                <button
-                  id="donatenow1"
-                  class="bg-[#b4f461] mx-auto rounded-lg py-3 px-5 text-xl font-bold text-black mt-2 w-full"
-                >
-                  Donate Now
-                </button>
               </div>
             </div>
-          </div>
-
-          <div class="cart-2">
-            <div
-              class="cart1 p-3 grid grid-cols-1 md:grid-cols-2  border border-gray-200 rounded-2xl "
-            >
-              <div class="left h-full w-full rounded-2xl overflow-hidden">
-                <!-- <img src="../assets/feni.png" alt="" /> -->
-                <div>
-                  <img src="./assets/noakhali.png" alt="">
-                </div>
-              </div>
-
-              <div class="right">
-                <div
-                  class="balance inline-flex items-center bg-gray-300 py-2 px-6 rounded-lg">
-                  <div class="flex items-center">
-                    <div class="lg:w-[1.7vw] w-[9vw]">
-                      <img src="./assets/coin.png" class="" alt="" />
-                    </div>
-                    <h1 class="font-bold text-lg ml-2" id="cart2-Balance">
-                      19690
-                    </h1>
-                    <span class="pl-1 font-semibold text-black">BDT</span>
+  
+            <div class="cart-2">
+              <div
+                class="cart1 p-3 grid grid-cols-1 md:grid-cols-2  border border-gray-200 rounded-2xl "
+              >
+                <div class="left h-full w-full rounded-2xl overflow-hidden">
+                  <!-- <img src="../assets/feni.png" alt="" /> -->
+                  <div>
+                    <img src="./assets/noakhali.png" alt="">
                   </div>
                 </div>
-                <h1 class="text-xl font-bold pt-6" >
-                  Donate for <span id="title2">Flood Relief in Feni,Bangladesh</span>
-                </h1>
-                <p class="pt-6 leading-6">
-                  The recent floods in Noakhali have caused significant damage
-                  to homes infrastructure. Your donation will help provide
-                  essential supplies and to those affected by this disaster.
-                  Every contribution, big or small, makes difference. Please
-                  join us in supporting the relief efforts and making a positive
-                  impact on the lives of those in need.
-                </p>
-                <input
-                  type="text"
-                  class="bg-white rounded-lg outline-1 outline-gray-200 px-3 py-3 block outline w-full mt-7 text-black"
-                  name=""
-                  id="donateAmount2"
-                  placeholder="White Donation Amount"
-                />
-                <button
-                  id="donatenow2"
-                  class="bg-[#b4f461] mx-auto rounded-lg py-3 px-5 text-xl font-bold text-black mt-2 w-full"
-                >
-                  Donate Now
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="cart-3">
-            <div
-              class="cart1 p-3 grid grid-cols-1 md:grid-cols-2  border border-gray-200 rounded-2xl "
-            >
-              <div class="left h-full w-full rounded-2xl overflow-hidden">
-                <!-- <img src="../assets/feni.png" alt="" /> -->
-                <div>
-                  <img src="./assets/quota-protest.png" alt="">
+  
+                <div class="right">
+                  <div
+                    class="balance inline-flex items-center bg-gray-300 py-2 px-6 rounded-lg">
+                    <div class="flex items-center">
+                      <div class="lg:w-[1.7vw] w-[9vw]">
+                        <img src="./assets/coin.png" class="" alt="" />
+                      </div>
+                      <h1 class="font-bold text-lg ml-2" id="cart2-Balance">
+                        19690
+                      </h1>
+                      <span class="pl-1 font-semibold text-black">BDT</span>
+                    </div>
+                  </div>
+                  <h1 class="text-xl font-bold pt-6" >
+                    Donate for <span id="title2">Flood Relief in Feni,Bangladesh</span>
+                  </h1>
+                  <p class="pt-6 leading-6">
+                    The recent floods in Noakhali have caused significant damage
+                    to homes infrastructure. Your donation will help provide
+                    essential supplies and to those affected by this disaster.
+                    Every contribution, big or small, makes difference. Please
+                    join us in supporting the relief efforts and making a positive
+                    impact on the lives of those in need.
+                  </p>
+                  <input
+                    type="text"
+                    class="bg-white rounded-lg outline-1 outline-gray-200 px-3 py-3 block outline w-full mt-7 text-black"
+                    name=""
+                    id="donateAmount2"
+                    placeholder="White Donation Amount"
+                  />
+                  <button
+                    id="donatenow2"
+                    class="bg-[#b4f461] mx-auto rounded-lg py-3 px-5 text-xl font-bold text-black mt-2 w-full"
+                  >
+                    Donate Now
+                  </button>
                 </div>
               </div>
-
-              <div class="right">
-                <div
-                  class="balance inline-flex items-center bg-gray-300 py-2 px-6 rounded-lg"
-                >
-                  <div class="flex items-center">
-                    <div class="lg:w-[1.7vw] w-[9vw]">
-                      <img src="./assets/coin.png" class="" alt="" />
-                    </div>
-                    <h1 class="font-bold text-lg ml-2" id="cart3-Balance">
-                      20420
-                    </h1>
-                    <span class="pl-1 font-semibold text-black">BDT</span>
+            </div>
+  
+            <div class="cart-3">
+              <div
+                class="cart1 p-3 grid grid-cols-1 md:grid-cols-2  border border-gray-200 rounded-2xl "
+              >
+                <div class="left h-full w-full rounded-2xl overflow-hidden">
+                  <!-- <img src="../assets/feni.png" alt="" /> -->
+                  <div>
+                    <img src="./assets/quota-protest.png" alt="">
                   </div>
                 </div>
-                <h1 class="text-xl font-bold pt-6" id="title3">
-                  Aid for Injured in the Quota Movement
-                </h1>
-                <p class="pt-6 leading-6">
-                  The recent floods in Noakhali have caused significant damage
-                  to homes infrastructure. Your donation will help provide
-                  essential supplies and to those affected by this disaster.
-                  Every contribution, big or small, makes difference. Please
-                  join us in supporting the relief efforts and making a positive
-                  impact on the lives of those in need.
-                </p>
-                <input
-                  type="text"
-                  class="bg-white rounded-lg outline-1 outline-gray-200 px-3 py-3 block outline w-full mt-7 text-black"
-                  name=""
-                  id="donateAmount3"
-                  placeholder="White Donation Amount"
-                />
-                <button
-                  id="donatenow3"
-                  class="bg-[#b4f461] mx-auto rounded-lg py-3 px-5 text-xl font-bold text-black mt-2 w-full">
-                
-                  Donate Now
-                </button>
+  
+                <div class="right">
+                  <div
+                    class="balance inline-flex items-center bg-gray-300 py-2 px-6 rounded-lg"
+                  >
+                    <div class="flex items-center">
+                      <div class="lg:w-[1.7vw] w-[9vw]">
+                        <img src="./assets/coin.png" class="" alt="" />
+                      </div>
+                      <h1 class="font-bold text-lg ml-2" id="cart3-Balance">
+                        20420
+                      </h1>
+                      <span class="pl-1 font-semibold text-black">BDT</span>
+                    </div>
+                  </div>
+                  <h1 class="text-xl font-bold pt-6" id="title3">
+                    Aid for Injured in the Quota Movement
+                  </h1>
+                  <p class="pt-6 leading-6">
+                    The recent floods in Noakhali have caused significant damage
+                    to homes infrastructure. Your donation will help provide
+                    essential supplies and to those affected by this disaster.
+                    Every contribution, big or small, makes difference. Please
+                    join us in supporting the relief efforts and making a positive
+                    impact on the lives of those in need.
+                  </p>
+                  <input
+                    type="text"
+                    class="bg-white rounded-lg outline-1 outline-gray-200 px-3 py-3 block outline w-full mt-7 text-black"
+                    name=""
+                    id="donateAmount3"
+                    placeholder="White Donation Amount"
+                  />
+                  <button
+                    id="donatenow3"
+                    class="bg-[#b4f461] mx-auto rounded-lg py-3 px-5 text-xl font-bold text-black mt-2 w-full">
+                  
+                    Donate Now
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
+
+          </section>
+          
 <!-- Modal -->
                 <div id="modal" class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title"
                     role="dialog" aria-modal="true">
@@ -242,6 +246,5 @@
 
     </main>
     <script src="calculation.js"></script>
-    <script src="utilities.js"></script>
   </body>
 </html>
