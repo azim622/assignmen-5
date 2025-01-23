@@ -3,86 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog page</title>
+
+    <!-- daisyUI + Tailwind css cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-        <header class=" top-0 border-b-[1px] z-[10]">
-          <div class="nav-container bg-orange-50  ">
-            <nav class="flex w-10/12 mx-auto py-6 justify-between items-center">
-                <button id="show-home-button" onclick="window.location.href='index.html'"
-                class="py-2 px-10 rounded-xl bg-lime-400 text-black font-bold"
-                id="blog"
-              >
-                Home
-              </button>
-              <div class=" md:flex items-center gap-3">
-                <div class="lg:w-[2vw] md:w-[4vw] w-[7vw]">
-                  <img src="./assets/logo.png" alt="" />
+    <header class="relative z-10 sticky top-0 w-full bg-white pb-5">
+        <nav class="bg-[#F9F7F3]">
+            <div class="container mx-auto px-5 py-5 flex md:items-center md:justify-between md:flex-row flex-col justify-center items-center gap-3 md:gap-0">
+              <button id="show-home-button" onclick="window.location.href='index.html'"
+              class="py-2 px-10 rounded-xl bg-lime-400 text-black font-bold"
+              id="blog"
+            >
+              Home
+            </button>
+
+                <div class="flex items-center jusitfy-center gap-2">
+                    <img src="./assets/logo.png" alt="" class="h-[30px]">
+                    <h1 class="font-semibold text-xl">Donate Bangladesh</h1>
                 </div>
-                <h1 class="font-bold md:text-xl hidden md:block">
-                  Bangladesh Donation
-                </h1>
-              </div>
-              <div class="balance flex items-center gap-1">
-                <div class="">
-                  <div class="lg:w-[2vw] md:w-[5vw] w-[10w]">
-                    <img src="./assets/coin.png" alt="" />
-                  </div>
+
+                <div class="flex items-center jusitfy-center gap-1">
+                    <img src="./assets/coin.png" alt="">
+                    <h1 class="font-medium text-xl"><span id="account-balance">6000</span> BDT</h1>
                 </div>
-                <h1 class="text-lg font-semibold" id="mianBalace">10000BDT</h1>
-              </div>
-            </nav>
-            <div class=" flex justify-center  bg-transparent backdrop-blur-xl z-50 gap-6 py-5">
-              <button
-                id="donation"
-                class="bg-[#b4f461] py-2 px-10 rounded-lg text-black font-bold"
-              >
-                Donation
-              </button>
-              <button
-                id="history"
-                class="outline outline-gray-300 py-2 px-10 rounded-lg text-black font-bold"
-              >
-                History
-              </button>
             </div>
+        </nav>
+        <!-- navbar ends -->
+    </header>
+
+    <main class="container mx-auto px-5 py-5 mt-10">
+        <h1 class="text-2xl md:text-3xl font-bold mb-5">Important FAQ</h1>
+        <div class="join join-vertical w-full">
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" checked="checked" />
+              <div class="collapse-title text-xl font-medium">What is the JavaScript DOM?</div>
+              <div class="collapse-content">
+                <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.</p>
+              </div>
+            </div>
+
+
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">What is JavaScript compiler?</div>
+              <div class="collapse-content">
+                <p>JavaScript Compiler is an Advanced IDE enabling you to compile JavaScript Programs on your Mobile Phone for Free. It comes with a code editor with in-built syntax highlighting capabilities.</p>
+              </div>
+            </div>
+
+
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">What is JavaScript interpreter?</div>
+              <div class="collapse-content">
+                <p>A JavaScript engine is a software component that executes JavaScript code. The first JavaScript engines were mere interpreters, but all relevant modern engines use just-in-time compilation for improved performance.</p>
+              </div>
+            </div>
+
+
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title text-xl font-medium">What is JavaScript V8?</div>
+                <div class="collapse-content">
+                  <p>V8 is a JavaScript and WebAssembly engine developed by Google for its Chrome browser. V8 is free and open-source software that is part of the Chromium project and also used separately in non-browser contexts, notably the Node.js runtime system.</p>
+                </div>
+              </div>
           </div>
+    </main>
 
-
-         
-
-         </header>
-
-         <main class="bg-white">
-          <div class="w-10/12 mx-auto py-10  space-y-3">
-          <h1 class="font-extrabold w-full h-full">Important FAQ?</h1>
-
-            <div class="collapse bg-base-200">
-              <input type="radio" name="my-accordion-1" checked="checked" />
-              <div class="collapse-title text-xl font-bold text-black">What is the document object model(Dom)?</div>
-              <div class="collapse-content">
-                <p>The Document Object Model (DOM) is a programming API for HTML and XML documents</p>
-              </div>
-            </div>
-            <div class="collapse bg-base-200">
-              <input type="radio" name="my-accordion-1" />
-              <div class="collapse-title text-xl  font-bold text-black">What is event delegation in the context  of the dom and why is it usefull?</div>
-              <div class="collapse-content">
-                <p>Event delegation is a design pattern in JavaScript used to efficiently manage and handle events on multiple child elements by attaching a single event listener to a common ancestor element.</p>
-              </div>
-            </div>
-            <div class="collapse bg-base-200">
-              <input type="radio" name="my-accordion-1" />
-              <div class="collapse-title text-xl  font-bold text-black">How do manifulet an elements attribute and style using the Dom?</div>
-              <div class="collapse-content">
-                <p>You can use the setAttribute() method in either case. It accepts two parameters: the attribute name and the attribute value.</p>
-              </div>
-            </div>
-
-          </div>
-         </main>
-   <script src="calculation.js"></script>      
+    <!-- script -->
+     <script src="js/calculation.js"></script>
 </body>
 </html>
