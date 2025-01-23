@@ -59,7 +59,6 @@ function donate(cardId) {
   // Get the inner text of sibling2
   const h2Text = h2Element.innerText;
 
-  // historyItem.innerText = `${donationAmount} BDT donated to card ${cardId} on ${now.toLocaleString()}`;
   historyItem.innerHTML = `
   <div class="list-none px-6 py-8 shadow-xl"><h3 class="text-xl">${donationAmount} Taka is Donated for ${h2Text}</h3>
   <p class="pt-3">Date: ${now.toLocaleString()}</p></div>
@@ -75,6 +74,5 @@ function donate(cardId) {
   document.getElementById("modalClose").addEventListener("click", function () {
     modal.classList.remove("modal-open");
   });
-  // Clear the input field after donation
   inputField.value = "";
 }
